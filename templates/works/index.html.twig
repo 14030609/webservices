@@ -1,0 +1,41 @@
+{% extends 'spot.html.twig' %}
+{% block body %}
+    <div id="blue">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h4>WE WORK HARD TO ACHIEVE EXCELLENCE</h4>
+                    <p>AND WE ARE HAPPY TO DO IT</p>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </div><!--  bluewrap -->
+
+
+    <div class="container desc">
+        {% for p in posts %}
+            <div class="row">
+                <br><br>
+
+                <div class="col-lg-6 centered">
+                    <img src="{{ p.getFoto() }}" alt="">
+                </div><!-- col-lg-6 -->
+                <div class="col-lg-6">
+                    <h4>{{ p.getNombre() }}</h4>
+                    <p>{{ p.getDescripcion() }}</p>
+                    <p>
+                        <i class="fa fa-circle-o"></i> Mobile Design<br/>
+                        <i class="fa fa-circle-o"></i> Web Design<br/>
+                        <i class="fa fa-circle-o"></i> Development<br/>
+                        <i class="fa fa-link"></i> <a href="#">BlackTie.co</a>
+                    </p>
+                </div>
+            </div><!-- row -->
+        {% endfor %}
+        <br><br>
+        <hr>
+        <br><br>
+        <br><br>
+    </div><!-- container -->
+
+{% endblock %}
